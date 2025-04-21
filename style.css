@@ -11,7 +11,7 @@
     background-color: rgb(188, 181, 181);
     width: 12vw;
     font-family: "Lato", sans-serif;
-    height: 100vh;
+    height: auto;
 }
 
 .sidebar nav{
@@ -130,17 +130,12 @@
     width: 448px;
 }
 
-
-
-
-
 .devInfo{
     display: flex;
     align-items: left;
     flex-direction: column;
     justify-content: center;
 }
-
 
 /*Contact me page*/
 .page-wrapper{
@@ -191,4 +186,64 @@
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*Experience page*/
+
+.internships{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    
+}
+
+.internship1{
+    padding: 20px;
+    background-color: red;
+    border: 1px solid #ccc;
+    height: 200px;
+}
+
+.internship2{
+    padding: 20px;
+    background-color: blue;
+    border: 1px solid #ccc;
+    height: 200px;
+}
+
+.internship3{
+    padding: 20px;
+    background-color: green;
+    border: 1px solid black;
+    height: 200px;
+}
+
+
+.experience_sidebar{
+    background-color: rgb(188, 181, 181);
+    width: 12vw;
+    font-family: "Lato", sans-serif;
+    height: auto;
+}
+
+.experience_sidebar nav{
+    padding: 30px;
+
+}
+
+.experience_sidebar nav li{
+    list-style: none;
+    font-size: 18px;
+    padding: 30px 0;
+
+}
+
+.experience_sidebar nav li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
 }
