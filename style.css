@@ -137,9 +137,34 @@
     justify-content: center;
 }
 
-/*Contact me page*/
+/*------------------------------------------------------Contact me page----------------------------------------------------*/
 .page-wrapper{
     display: flex;
+}
+
+.contactMe_sidebar{
+    background-color: rgb(188, 181, 181);
+    width: 14vw;
+    font-family: "Lato", sans-serif;
+    height: auto;
+}
+
+.contactMe_sidebar nav{
+    padding: 25px;
+
+}
+
+.contactMe_sidebar nav li{
+    list-style: none;
+    font-size: 18px;
+    padding: 30px 0;
+
+}
+
+.contactMe_sidebar nav li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
 }
 
 .contact-content {
@@ -149,18 +174,18 @@
 
 .mainContactMe {
     margin-left: 8vw; /* Same as sidebar width */
-    padding: 20px;
+    padding: 50px;
     width: 88vw;
 }
 
 
-/* Projects page */
+/*-----------------------------------------------Projects page---------------------------------------------------------------*/
 
 .project-container {
     padding: 30px;
-    background-color: #f5f5f5;
-    border-radius: 12px;
-    margin: 30px 0;
+    background-color: red;
+    border-radius: 0px;
+    margin: 0;
 }
 
 .project-content {
@@ -174,11 +199,14 @@
     margin-top: 25px;
     flex: 1 1 60%;
     padding-right: 20px;
+    margin-bottom: 15px;
 }
 
 .project-image {
     flex: 1 1 35%;
     text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .project-image img {
@@ -190,13 +218,16 @@
 
 
 
-/*Experience page*/
+/*--------------------------------------------Experience page------------------------------------------------------------------*/
 
 .internships{
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    font-size: 14px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: bold;
 
     
 }
@@ -208,11 +239,18 @@
     height: 200px;
 }
 
+.internship1 li{
+    padding: 8px;
+}
+
 .internship2{
     padding: 20px;
     background-color: blue;
     border: 1px solid #ccc;
     height: 200px;
+}
+.internship2 li{
+    padding: 8px;
 }
 
 .internship3{
@@ -220,6 +258,9 @@
     background-color: green;
     border: 1px solid black;
     height: 200px;
+}
+.internship3 li{
+    padding: 8px;
 }
 
 
@@ -246,4 +287,39 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
 
+}
+
+
+
+
+/*---------------------------------------------About_Me-----------------------------------------------------------------------*/
+
+.aboutMe_sidebar{
+    background-color: rgb(188, 181, 181);
+    width: 12vw;
+    font-family: "Lato", sans-serif;
+    height: 100vh;
+}
+.aboutMe_sidebar nav{
+    padding: 30px;
+
+}
+
+.aboutMe_sidebar nav li{
+    list-style: none;
+    font-size: 18px;
+    padding: 30px 0;
+
+}
+
+.aboutMe_sidebar nav li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+
+
+.aboutMe_main{
+    margin: 35px;
 }
