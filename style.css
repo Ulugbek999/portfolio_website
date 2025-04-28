@@ -182,40 +182,72 @@
 /*-----------------------------------------------Projects page---------------------------------------------------------------*/
 
 .project-container {
-    padding: 30px;
-    background-color: red;
-    border-radius: 0px;
-    margin: 0;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
 }
 
 .project-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 25px;
+    overflow: hidden;
+    height: 280px; /* default height */
+    transition: height 0.5s ease;
+}
+
+.project-content.expanded{
+    height: 550px;
 }
 
 .project-text {
-    margin-top: 25px;
-    flex: 1 1 60%;
-    padding-right: 20px;
-    margin-bottom: 15px;
+    flex: 1 1 65%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-text p {
+    margin-bottom: 10px
 }
 
 .project-image {
     flex: 1 1 35%;
     text-align: right;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .project-image img {
-    max-width: 100%;
-    height: auto;
+    max-width: 90%;
+    height: 200px;
     border-radius: 8px;
+    object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: height 0.5s ease;
 }
 
+.project-content.expanded .project-image img{
+    height: 350px;
+}
+
+.expand-btn{
+    margin-top: 10px;
+    background-color: #00ffd5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
 
 /*--------------------------------------------Experience page------------------------------------------------------------------*/
@@ -223,20 +255,23 @@
 .internships{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
     font-size: 14px;
     font-family: "Source Code Pro", monospace;
-    font-weight: bold;
-
-    
 }
 
 .internship1{
+    margin: 10px;
     padding: 20px;
-    background-color: red;
-    border: 1px solid #ccc;
-    height: 200px;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow behind it */
+
 }
 
 .internship1 li{
@@ -244,20 +279,30 @@
 }
 
 .internship2{
+    margin: 10px;
     padding: 20px;
-    background-color: blue;
-    border: 1px solid #ccc;
-    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow behind it */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 10px
 }
 .internship2 li{
     padding: 8px;
 }
 
 .internship3{
+    margin: 10px;
     padding: 20px;
-    background-color: green;
-    border: 1px solid black;
-    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow behind it */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 10px
 }
 .internship3 li{
     padding: 8px;

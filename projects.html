@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-
         <div class="sidebar">
             <nav>
                 <ul>
@@ -30,37 +29,41 @@
 
         <div class="project-container">
 
-            <h1>Recent projects</h1>
+            <div style="border-radius: 15px; height: 45px; box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2); padding: 5px;"><h1>Recent projects</h1></div>
 
             <div class="project-content">
                 <div class="project-text">
-                    <h3>Name Comparison Tool</h3>
-                    <p>
-                        A high-performance Python application designed for cross-database record validation. Initially built for name matching, this tool scales to compare any structured data across Excel sheets or CSV files. It utilizes the <strong>pandas</strong> library for fast, vectorized operations and supports fuzzy matching for robust comparison of fields that may contain minor variations or formatting inconsistencies.
-                    </p>
-                    <p>
-                        The tool is capable of processing tens of thousands of rows in seconds, making it ideal for validating records from multiple data sources. A simple yet functional GUI was developed using additional Python libraries to allow non-technical users to run comparisons without writing code.
-                    </p>
+                    <div class="project-left">
+                        <h3>Name Comparison Tool</h3>
+                        <p>A high-performance Python application designed for cross-database record validation. Initially built for name matching, this tool scales to compare any structured data across Excel sheets or CSV files. It utilizes the <strong>pandas</strong> library for fast, vectorized operations and supports fuzzy matching for robust comparison of fields that may contain minor variations or formatting inconsistencies.</p>
+                        <p>The tool is capable of processing tens of thousands of rows in seconds, making it ideal for validating records from multiple data sources. A simple yet functional GUI was developed using additional Python libraries to allow non-technical users to run comparisons without writing code.</p>
+                        <button class="expand-btn" onclick="toggleExpand(this)">Show More</button>
+                    </div>
+
+                    <div class="project-right">
+                        <div class="project-image">
+                            <img src="project pictures/name-comparison-tool.png" alt="Name Comparison Tool" />
+                        </div>
+                    </div>
+
                 </div> 
-                <div class="project-image">
-                    <img src="project pictures/name-comparison-tool.png" alt="Chatbot Screenshot" />
-                </div>
 
-
-                <div class="project-text">
-                    <h3>AI Chatbots</h3>
-                    <p>
-                        A Python-based conversational AI system built using the <strong>OpenAI API</strong> and deployed through a lightweight <strong>Flask</strong> web interface. The chatbot supports intelligent, multi-turn conversations with dynamic context retention, making it suitable for task-specific assistance.
-                    </p>
-                    <p>
-                        The backend leverages <strong>SQLite</strong> for session and user data management, <strong>regex</strong> for input pattern recognition and preprocessing, and <strong>requests</strong> for API handling. Data is structured and processed efficiently using <strong>pandas</strong>, and <strong>dotenv</strong> is used for secure configuration management.
-                    </p>
-                    <p>
-                        The frontend is implemented with clean <strong>HTML</strong> and <strong>CSS</strong>, providing a responsive interface with minimal use of JavaScript. This project demonstrates how to architect and deploy AI-driven tools with a focus on modular design, data persistence, and real-world usability.
-                    </p>
-                </div>
-                <div class="project-image">
-                    <img src="project pictures/AI-chatBots.png" alt="Chatbot Screenshot" />
+            </div>
+                <div class="project-content">
+                    <div class="project-text">
+                        <div class="project-left">
+                            <h3>AI Chatbots</h3>
+                            <p>A Python-based conversational AI system built using the <strong>OpenAI API</strong> and deployed through a lightweight <strong>Flask</strong> web interface. The chatbot supports intelligent, multi-turn conversations with dynamic context retention, making it suitable for task-specific assistance.</p>
+                            <p>The backend leverages <strong>SQLite</strong> for session and user data management, <strong>regex</strong> for input pattern recognition and preprocessing, and <strong>requests</strong> for API handling. Data is structured and processed efficiently using <strong>pandas</strong>, and <strong>dotenv</strong> is used for secure configuration management.</p>
+                            <p>The frontend is implemented with clean <strong>HTML</strong> and <strong>CSS</strong>, providing a responsive interface with minimal use of JavaScript. This project demonstrates how to architect and deploy AI-driven tools with a focus on modular design, data persistence, and real-world usability.</p>    
+                            <button class="expand-btn" onclick="toggleExpand(this)">Show More</button>
+                        </div>
+                    </div>
+                    <div class="project-right">
+                        <div class="project-image">
+                            <img src="project pictures/AI-chatBots.png" alt="Chatbot Screenshot" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,5 +72,6 @@
 
 
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
