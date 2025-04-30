@@ -7,35 +7,56 @@
 }
 
 
-.sidebar{
+.sidebar {
     background-color: rgb(188, 181, 181);
     width: 12vw;
     font-family: "Lato", sans-serif;
-    height: auto;
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Keep it fixed on scroll */
+    top: 0;
+    left: 0;
 }
 
-.sidebar nav{
+.sidebar nav {
     padding: 30px;
-
 }
 
-.sidebar nav li{
+.sidebar nav li {
     list-style: none;
     font-size: 18px;
     padding: 30px 0;
-
 }
 
-.sidebar nav li a{
+.sidebar nav li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-
+    position: relative;
 }
+
+/* Underline effect */
+.sidebar nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; /* slightly below text */
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.sidebar nav li a:hover::after {
+    width: 100%;
+}
+
 
 .main{
     background-color: white;
     width: 90vw;
+    margin-left: 12vw; /* Push content right */
+    padding: 20px;
 }
+
 
 .container{
     display: flex;
@@ -49,7 +70,6 @@
     margin: 70px auto;
     display: flex;
     justify-content: space-around;
-
 }
 
 .hello{
@@ -75,18 +95,7 @@
 
 }
 
-.buttons button{
 
-    border-radius: 20px;
-    padding: 10px 14px;
-    color: white;
-    background-color: dodgerblue;
-    font-weight: bold;
-    font-size: 21px;
-    margin: 25px 5px 5px; /* top, horizontal, bottom */
-    cursor: pointer;
-
-}
 
 .nightMode button{
     position: fixed;
@@ -119,15 +128,37 @@
     border-radius: 50%;
 }
 
+.buttons button{
+    border-radius: 20px;
+    padding: 10px 14px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 21px;
+    margin: 65px 5px; /* top, horizontal, bottom */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
 .buttons button:hover{
     background-color: white;
     color: dodgerblue;
+    box-shadow: 0px 4px 8px dodgerblue;
+    transform: scale(1.05);
 }
 
 
 
 .devPic img{
-    width: 448px;
+    width: 330px;
+    border-radius: 330px;
+    transition: transform 0.2s ;
+}
+
+.devPic img:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px (0, 0, 0, 0.55);
 }
 
 .devInfo{
@@ -137,56 +168,135 @@
     justify-content: center;
 }
 
+/*contact buttons*/
+
+footer {
+    margin-top: none;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.circle-btn {
+    background-color: dodgerblue;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.circle-btn:hover {
+    background-color: rgba(233, 11, 11, 0);
+    box-shadow: 0px 4px 8px dodgerblue;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
 /*------------------------------------------------------Contact me page----------------------------------------------------*/
 .page-wrapper{
     display: flex;
-}
-
-.contactMe_sidebar{
-    background-color: rgb(188, 181, 181);
-    width: 14vw;
-    font-family: "Lato", sans-serif;
-    height: auto;
-}
-
-.contactMe_sidebar nav{
-    padding: 25px;
-
-}
-
-.contactMe_sidebar nav li{
-    list-style: none;
-    font-size: 18px;
-    padding: 30px 0;
-
-}
-
-.contactMe_sidebar nav li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-
+    
 }
 
 .contact-content {
-    padding: 5px;
     width: 60%;
+    padding: 25px;
 }
 
 .mainContactMe {
-    margin-left: 8vw; /* Same as sidebar width */
     padding: 50px;
     width: 88vw;
+    margin-left: 12vw;
+    padding: 20px;
 }
+
+
+/*special sidebar to overright the bootstrap*/
+
+.sidebar-contactMe {
+    background-color: rgb(188, 181, 181);
+    width: 12vw;
+    font-family: "Lato", sans-serif;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-contactMe nav {
+    padding: 30px;
+}
+
+.sidebar-contactMe nav li {
+    list-style: none;
+    font-size: 18px;
+}
+
+.sidebar-contactMe nav li a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 18px;
+    display: block;
+    padding: 15px 10px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-contactMe nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.sidebar-contactMe nav li a:hover {
+    color: black;
+}
+
+.sidebar-contactMe nav li a:hover::after {
+    width: 60%;
+}
+
+.sidebar-contactMe ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
 
 
 /*-----------------------------------------------Projects page---------------------------------------------------------------*/
 
 .project-container {
-    padding: 15px;
     background-color: rgb(255, 255, 255);
     margin: 10px;
     overflow: hidden;
     transition: all 0.5s ease;
+    margin-left: 14vw; /* Push content right */
+    padding: 18px;
+
 
 }
 
@@ -231,7 +341,7 @@
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     transition: height 0.5s ease;
 }
 
@@ -241,12 +351,22 @@
 
 .expand-btn{
     margin-top: 10px;
-    background-color: #00ffd5;
+    background-color: dodgerblue;
     border: none;
     padding: 8px 16px;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+
+}
+
+.expand-btn:hover{
+    background-color: rgb(244, 244, 255);
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+    transform: scale(1.02);
 }
 
 
@@ -259,6 +379,8 @@
     width: 100%;
     font-size: 14px;
     font-family: "Source Code Pro", monospace;
+    margin-left: 14vw; /* Push content right */
+    padding: 20px;
 }
 
 .internship1{
@@ -339,32 +461,32 @@
 
 /*---------------------------------------------About_Me-----------------------------------------------------------------------*/
 
-.aboutMe_sidebar{
+.sidebar{
     background-color: rgb(188, 181, 181);
     width: 12vw;
     font-family: "Lato", sans-serif;
-    height: auto;
+    height: 100vh;
 }
-.aboutMe_sidebar nav{
+.sidebar nav{
     padding: 30px;
 
 }
-
-.aboutMe_sidebar nav li{
+.sidebar nav li{
     list-style: none;
     font-size: 18px;
     padding: 30px 0;
 
 }
 
-.aboutMe_sidebar nav li a{
+.sidebar nav li a{
     text-decoration: none;
     color: rgb(0, 0, 0);
 
 }
 .aboutMe_main{
-    margin: 35px;
-    margin-top: -20px;
+    margin-left: 14vw; /* Push content right */
+    padding: 20px;
+
 }
 
 .intro{
