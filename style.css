@@ -354,6 +354,7 @@
 }
 
 .btn-btn-primary{
+    gap: 20px;
     font-size: small;
     border-radius: 8px;
     height: 30px;
@@ -373,6 +374,7 @@
 /*-----------------------------------------------Projects page---------------------------------------------------------------*/
 
 .project-container {
+    gap: 20px;
     
     background: linear-gradient(120deg, #e0f7fa, #5494da);
     margin: 10px;
@@ -381,6 +383,7 @@
     margin-left: 14vw; /* Push content right */
     padding: 18px;
     border-radius: 15px;
+    max-height: auto;
 
 }
 
@@ -392,13 +395,27 @@
     margin: 10px 0;
     padding: 25px;
     overflow: hidden;
-    height: 280px; /* default height */
-    transition: height 0.5s ease;
+    max-height: 800px;
+    transition: max-height 0.6s ease, padding-bottom 0.3s ease, box-shadow 0.3s, transform 0.5s;
+    overflow: hidden;
+
+
 }
 
-.project-content.expanded{
-    height: 550px;
+.project-content:hover{
+
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgb(88, 87, 87);  /* Shadow behind it */
+
 }
+
+
+.project-content.expanded {
+  max-height: 1000px; /* set to a high enough value */
+  padding-bottom: 40px;
+}
+
+
 
 .project-text {
     flex: 1 1 65%;
@@ -430,9 +447,26 @@
     transition: height 0.5s ease;
 }
 
+
+
 .project-content.expanded .project-image img{
-    height: 350px;
+    height: 400px;
+
 }
+#moreText {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.project-content.expanded #moreText {
+  opacity: 1;
+  max-height: 300px;
+}
+
+
+
 
 .expand-btn{
     margin-top: 10px;
@@ -462,22 +496,35 @@
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Source Code Pro", monospace;
     margin-left: 14vw; /* Push content right */
     padding: 20px;
+    color: #020a3b;
+    margin-bottom: 40px;
 }
 
+
+
 .internship1{
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s, transform 0.5s;
+
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(120deg, #e0f7fa, #95c4f6);
     height: auto;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
     gap: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow behind it */
+}
+
+.internship1:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(88, 87, 87);  /* Shadow behind it */
 
 }
 
@@ -486,9 +533,12 @@
 }
 
 .internship2{
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s, transform 0.5s;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(120deg, #e0f7fa, #95c4f6);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow behind it */
     height: auto;
     display: flex;
@@ -496,14 +546,23 @@
     border-radius: 30px;
     gap: 10px
 }
+.internship2:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(88, 87, 87);  /* Shadow behind it */
+
+}
+
 .internship2 li{
     padding: 8px;
 }
 
 .internship3{
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s, transform 0.5s;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(120deg, #e0f7fa, #95c4f6);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow behind it */
     height: auto;
     display: flex;
@@ -511,6 +570,12 @@
     border-radius: 30px;
     gap: 10px
 }
+.internship3:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(88, 87, 87);  /* Shadow behind it */
+
+}
+
 .internship3 li{
     padding: 8px;
 }
@@ -569,8 +634,10 @@
 
 }
 .aboutMe_main{
-    margin-left: 14vw; /* Push content right */
-    padding: 20px;
+    margin-left: 12vw; /* Push content right */
+    padding: 10px;
+    background: linear-gradient(120deg, #e0f7fa, #5494da);
+    min-height: 100vh;  
 
 }
 
@@ -591,11 +658,23 @@
 }
 
 .intro-text {
+
+    display: grid;
     background-color: rgba(0, 0, 0, 0.05);
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     margin-top: 12px;
+    transition: box-shadow 0.3s, transform 0.5s;
+    
+    
+}
+
+.intro-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+
 }
 
 .intro-text h2 {
@@ -612,25 +691,36 @@
 
 
 .intro-item{
-    margin-top: 20px
+    margin-top: 60px;
+    margin-bottom: 60px
+}
+
+.intro-item h2{
+  margin-left: 50px;  
 }
 
 .skillcontainer{
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-left: 50px;
+    margin-top: 25px;
 }
 
 .skillitem{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .skill-name {
     width: 180px; /* Fixed width for names */
     font-weight: bold;
+    font-size: 18px;
+    transition: font-size 0.2s;
+  }
+
+.skill-name:hover{
+  font-size: 20px;
 }
 
 .skill-bar {
@@ -644,7 +734,7 @@
 
 .skill-fill {
     height: 100%;
-    background: linear-gradient(90deg, #00ffd5, #00ffa2);
+    background: linear-gradient(120deg, #3b31f4, #1adaf4);
     border-radius: 10px 0 0 10px;
 
     width: 0; /* Start at 0 */
@@ -663,8 +753,8 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
-    color: #ccc;
+    color: #00013f;
     margin-top: 5px;
-    margin-left: 400px;
+    margin-left: 180px;
     width: 60%;
 }

@@ -1,13 +1,33 @@
-function toggleExpand(button){
-  const projectContent = button.closest('.project-content');
-  projectContent.classList.toggle('expanded');
-  if(projectContent.classList.contains('expanded')){
-    button.textContent = "Show less";
-  }else{
-    button.textContent = "Shoe more"
-  }
 
+function toggleExpand(button) {
+  // Get the closest parent with class 'project-content' (so we only affect the right section)
+  const projectContent = button.closest('.project-content');
+
+  // Find the #moreText div inside this specific project
+  const moreText = projectContent.querySelector('#moreText');
+
+  // Toggle the 'expanded' class on the .project-content element
+  projectContent.classList.toggle('expanded');
+
+  // Check if 'expanded' class is now active
+  if (projectContent.classList.contains('expanded')) {
+    // If expanded, show the extra text by setting display to block
+    moreText.style.display = 'block';
+
+    // Change button text to "Show less"
+    button.textContent = 'Show less';
+  } else {
+    // If not expanded, hide the extra text
+    moreText.style.display = 'none';
+
+    // Change button text back to "Show more"
+    button.textContent = 'Show more';
+  }
 }
+
+
+
+
 
 const phrases = ["Hi! My name is  ", "Welcome to my portfolio website", "Glad you're here!"];
 const typedText = document.getElementById("typed-text");
