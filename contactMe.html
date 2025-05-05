@@ -10,27 +10,23 @@
 
   <div class="container">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="aboutme.html">About Me</a></li>
-        </ul>
-      </nav>
-    </aside>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main class="mainContactMe">
       <section class="contact-section">
         <h2>Contact Me</h2>
-        <form
-          action="https://formsubmit.co/ulugbekabdurakhmonov.tennis@gmail.com"
-          method="POST"
-          class="contact-form"
-        >
+        <form action="/send_email" method="POST" class="contact-form">
+
           <!-- Full Name -->
           <div class="form-group">
             <label for="name">Full Name</label>
@@ -62,7 +58,7 @@
               id="message"
               name="message"
               rows="5"
-              placeholder="Type your message here…"
+              placeholder="We want to offer you a full-time position at our company.. Starting salary $65 an hour +, your projects are amazing and we wanna hire you right now!"
               required
             ></textarea>
           </div>
