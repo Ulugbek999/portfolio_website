@@ -1,6 +1,14 @@
 from flask import Flask, request, redirect
 import smtplib
 from email.message import EmailMessage
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+EMAIL_USER = os.getenv("MAIL_USERNAME")
+EMAIL_PASS = os.getenv("MAIL_PASSWORD")
+
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 
@@ -21,12 +29,12 @@ def send_email():
     msg = EmailMessage()
     msg["Subject"] = f"📬 New message from {name}"
     msg["From"]    = "YOUR_EMAIL@gmail.com"
-    msg["To"]      = "ulugbekabdurakhmonov.tennis@gmail.com"
+    msg["To"]      = EMAIL_USER
     msg.set_content(f"From: {name} <{email}>\n\n{message}")
 
     with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
         smtp.starttls()
-        smtp.login("ulugbekabdurakhmonov.tennis@gmail.com", "gkkc kwcp dcyy uuqg")
+        smtp.login(EMAIL_USER, EMAIL_PASS)
         smtp.send_message(msg)
 
     return redirect("/thank-you.html")
