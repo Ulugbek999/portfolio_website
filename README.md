@@ -70,7 +70,7 @@ python run.py
 
 
 💬 Contact
-If you'd like to collaborate, hire me, or ask questions, feel free to use the contact form on the live site, or reach out directly via LinkedIn (add your real link).
+If you'd like to collaborate, hire me, or ask questions, feel free to use the contact form on the live site, or reach out directly via [LinkedIn](https://www.linkedin.com/in/ulugbekabdurakhmonov/).
 
 ⭐️ Show Support
 If you found this useful or inspiring:
