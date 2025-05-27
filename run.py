@@ -28,8 +28,9 @@ def send_email():
 
     msg = EmailMessage()
     msg["Subject"] = f"📬 New message from {name}"
-    msg["From"]    = "YOUR_EMAIL@gmail.com"
+    msg["From"]    = EMAIL_USER
     msg["To"]      = EMAIL_USER
+    msg["Reply-To"] = email
     msg.set_content(f"From: {name} <{email}>\n\n{message}")
 
     with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
