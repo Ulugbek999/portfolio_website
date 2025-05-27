@@ -68,6 +68,8 @@ Copy
 Edit
 python run.py
 
+---
+
 
 💬 Contact
 If you'd like to collaborate, hire me, or ask questions, feel free to use the contact form on the live site, or reach out directly via [LinkedIn](https://www.linkedin.com/in/ulugbekabdurakhmonov/).
@@ -85,3 +87,5 @@ Fork it to create your own version!
 I'm a passionate Computer Science student with experience in web development, backend APIs, and building tools with Python and Java. I built this site to showcase my work and continue growing as a developer.
 
 This is just the beginning — stay tuned for more.
+
+---
