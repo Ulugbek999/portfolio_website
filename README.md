@@ -70,23 +70,26 @@ python run.py
 
 ---
 
-
 ## 💬 Contact
 
-If you'd like to collaborate, hire me, or ask questions, feel free to use the contact form on the live site, or reach out directly via [LinkedIn](https://www.linkedin.com/in/ulugbekabdurakhmonov/).
+If you'd like to collaborate, hire me, or ask questions, feel free to use the contact form on the [live site](https://beks-portfolio-website.onrender.com), or reach out directly via [LinkedIn](https://www.linkedin.com/in/ulugbekabdurakhmonov/).
 
-⭐️ Show Support
+---
+
+## ⭐️ Show Support
+
 If you found this useful or inspiring:
 
-Star this repo ⭐
+- ⭐ Star this repo  
+- 🔄 Share it  
+- 🍴 Fork it to create your own version!
 
-Share it
+---
 
-Fork it to create your own version!
+## 💭 About Me
 
-🧠 About Me
 I'm a passionate Computer Science student with experience in web development, backend APIs, and building tools with Python and Java. I built this site to showcase my work and continue growing as a developer.
 
-This is just the beginning — stay tuned for more.
+> This is just the beginning — stay tuned for more.
 
 ---
